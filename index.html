@@ -32,6 +32,13 @@
     .text-capitalize{
       font-size:12px;
     }
+    .icon-link{
+      background-color:var(--bs-gray-800) !important;
+      display:none !important;
+    }
+    /* .btn-light{
+      background-color:var(--bs-gray-800) !important;
+    } */
 
     
   </style>
@@ -59,7 +66,7 @@
               </p>
 
               <div class="d-flex align-items-center justify-content-between">
-                <div class=" d-flex align-items-center">
+                <div class=" d-flex align-items-center  profile">
                   <img src="./images/avatar-michelle.jpg" alt="avatar-michelle" class="img-fluid rounded-circle">
                  
                     <p class="card-title text-capitalize lh-sm  px-2 ">
@@ -69,14 +76,14 @@
                   
                 </div>
                 <div class="">
-                  <div class="icon-link d-flex justify-content-around align-items-center bg-secondary">
+                  <div class="icon-link d-flex justify-content-around align-items-center bg-secondary rounded">
                     <p class="text-uppercase text-light">share</p>
                    <a href="https://www.facebook.com/?_rdc=1&_rdr"><img src="./images/icon-facebook.svg" alt="icon"></a> 
                    <a href="https://twitter.com/i/flow/single_sign_on"><img src="./images/icon-twitter.svg" alt="icon"></a> 
                    <a href="https://www.pinterest.com/"><img src="./images/icon-pinterest.svg" alt="icon"></a> 
-                   <img src="./images/icon-share.svg" alt="icon">
+                   
                   </div>
-                  <button class="btn btn-light rounded-circle w-25 h-25"><img src="./images/icon-share.svg" alt="share-icon"></button>
+                  <button class="btn btn-light rounded-circle w-75 h-75"><img src="./images/icon-share.svg" alt="share-icon"></button>
                 </div>
               </div>
            
@@ -85,51 +92,34 @@
         </div>
       </div>
     </div>
-    <!-- <div class="container d-flex justify-content-center align-items-center m-auto ">
-      <div class="card" style="max-width: 560px">
-        <div class="row g-3">
-          <div class="col-md-4">
-            <img src="./images/drawers.jpg" alt="drawers" class="img-fluid rounded-start h-100" />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title fs-5">
-                Shift the overall look and feel by adding these wonderful
-                touches to furniture in your home.
-              </h5>
-              <p class="card-text text-secondary lh-sm">
-                Ever been in a room and felt like something was missing? perhaps
-                it felt slightly bare and uninviting. I've got some simple tips
-                to help you make any room feel complete.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-               <div class="d-flex justify-content-around align-items-center ">
-                <img src="./images/avatar-michelle.jpg" alt="" class="rounded-circle">
-                   
-                    <p class="text-capitalize p-2">michelle appleton<br>
-                    <span class="text-secondary">28 jun 2020</span>
-                    </p>
-                    
-                  </div>
-                  <div class="position-relative">
-                    
-                     <button class="btn">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
-                     </button>
-                  </div>
-               
-                  
-              </div>
 
-            </div>
-              
-             
-          </div>
-          
-        </div>
-      </div>
-    </div> -->
-    <script src="doc.js"></script>
-    <script></script>
+    <script>
+      const profiles =document.querySelector(".profile");
+      const socialLink = document.querySelector(".icon-link");
+      const shareBtn = document.querySelector(".btn-light");
+      
+
+    
+
+      shareBtn.addEventListener("click", function(){
+        profiles.style.display="none";
+        
+        //  socialLink.popUp("icon-link");
+        //  socialLink.classList.display ("flex")
+
+
+      })
+//       document.getElementsByClassName('btn').addEventListener('click', function() {
+
+
+        
+//     // Your code here
+// });
+    </script>
+    
+    <script src="doc.js">
+      
+    </script>
+    
   </body>
 </html>
