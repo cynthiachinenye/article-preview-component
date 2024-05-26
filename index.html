@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -102,8 +102,9 @@
     
 
       shareBtn.addEventListener("click", function(){
-        profiles.style.display="none";
-        
+      
+
+
         //  socialLink.popUp("icon-link");
         //  socialLink.classList.display ("flex")
 
@@ -122,4 +123,98 @@
     </script>
     
   </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Share</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.share-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.share-links {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.share-links a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #0073e6;
+    transition: color 0.2s;
+}
+
+.share-links a:hover {
+    color: #005bb5;
+}
+
+@media (max-width: 600px) {
+    .share-links {
+        top: 30px;
+        left: -50px;
+        width: 150px;
+    }
+}
+
+</style>
+<body>
+    <div class="share-container">
+        <img id="shareIcon" src="./images/icon-share.svg" alt="Share Icon" class="icon">
+        <div id="shareLinks" class="share-links">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=yourURL" target="_blank">Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=yourURL" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=yourURL" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById('shareIcon').addEventListener('click', function() {
+    const shareLinks = document.getElementById('shareLinks');
+    if (shareLinks.style.display === 'none' || shareLinks.style.display === '') {
+        shareLinks.style.display = 'block';
+    } else {
+        shareLinks.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
 </html>
